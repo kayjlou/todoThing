@@ -36,7 +36,7 @@ const styles = theme => ({
 class Form extends Component {
 
   render() {
-    const { handleAddToDo, classes, item, onItemChange } = this.props
+    // const { handleAddToDo, classes, item, onItemChange } = this.props
 
     return (
       <>
