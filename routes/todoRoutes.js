@@ -1,4 +1,4 @@
-const {Todo} = require('../models')
+const { Todo } = require('../models')
 
 module.exports = app => {
 
