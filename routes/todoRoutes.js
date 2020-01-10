@@ -4,12 +4,23 @@ module.exports = app => {
 
     //get all todos
     app.get('/todo', (req,res)=>{
-        Todo.find()
-        .then(items => res.json(items))
-        .catch(e=> console.error(e))
+        res.send("YAY")
+        // Todo.find()
+        // .then(items => res.json(items))
+        // .catch(e=> console.error(e))
     })
 
-    //delete all todos
+    //delete one todos
+    app.delete('/todo/:id', async (req,res)=>{
+        const {id} = req.params
+
+        let item = await Todo.findByIdAndDelete(id)
+
+        return res.status(200).send({
+            error: false,
+            item
+        })
+    })
     
 
     //update todos

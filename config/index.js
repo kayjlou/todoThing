@@ -1,4 +1,4 @@
-odule.exports = require('mongoose')
+module.exports = require('mongoose')
   .connect('mongodb://localhost/tododb', {
     useCreateIndex: true,
     useFindAndModify: true,
